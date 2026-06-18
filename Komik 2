@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restricted Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #intro {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url(https://tenor.com/bmeSP.gif), linear-gradient(135deg, #ffb6d9, #ffcce6);
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 999;
+    }
+    #intro::before {
+      pointer-events: none;
+    }
+    button {
+      padding: 12px 25px;
+      background: hotpink;
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    #main {
+      display: none;
+    }
+    </style>
+    </head>
+      <body>
+        <div id="intro">
+          <h1>Welcomeeeeee🤩🌷︎</h1>
+          <h2>thx for visiting</h2>
+          <h3>click the button below!</h3>
+          <button onclick="enterSite()">Enter</button>
+        </div>
+        <div id="main">
+          <img src="https://raw.githubusercontent.com/Lily7654/komik2/f243c48233c8049fe6c425f484bc75783e86beae/Untitled96.jpg" alt="Komik 2";
+          style="width:100%;">
+        </div>
+        <script>
+          function enterSite() {
+            document.getElementById("intro").style.display = "none";
+            document.getElementById("main").style.display = "block";
+            document.getElementById("audio-bar").style.display = "block";
+            document.querySelector("audio").play();
+          }
+        </script>
+      </body>
+      </html>
+    </head>
+    <head>
+    <style>
+    html, body {
+     width: 100%;
+     background: #000;
+     overflow-y: auto;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      image-rendering: high-quality;
+      -webkit-image-rendering: high-quality;
+    }
+    #audio-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 8px;
+      z-index: 999;
+      transition: transform 0.3s ease;
+    }
+    #audio-bar.hidden {
+      transform: translateY(-100%);
+    }
+    audio {
+      width: 100%;
+    }
+    body {
+      padding-top: 60px;
+    }
+  </style>
+</head>
+</script>
+
+<body>
+  <div id="audio-bar" style="display:none;">
+    <audio autoplay loop controls>
+    <source src="none" type="audio/mp3"> Browser Anda tidak mendukung pemutar audio.
+    </audio>
+  </div>
+<script>
+  let lastScroll= 0;
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    const audioBar = document.getElementById("audio-bar");
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      audioBar.classList.add("hidden");
+    } else {
+      audioBar.classList.remove("hidden");
+    }
+    lastScroll = currentScroll;
+  });
+</script>
+<script>
+  var password = prompt("Enter the password to access content🐸🥬🌧:");
+  if (password != "potato") {
+    document.body.innerHTML = "Access Denied!";
+  }
+</script>
+</body>
+</html>
